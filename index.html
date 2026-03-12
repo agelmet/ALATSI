@@ -43,7 +43,6 @@
                     },
                     animation: {
                         'blob': 'blob 10s infinite',
-                        'marquee': 'marquee 40s linear infinite',
                     },
                     keyframes: {
                         blob: {
@@ -51,10 +50,6 @@
                             '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
                             '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
                             '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        },
-                        marquee: {
-                            '0%': { transform: 'translateX(0%)' },
-                            '100%': { transform: 'translateX(-50%)' },
                         }
                     }
                 }
@@ -90,23 +85,17 @@
         .img-zoom img { transition: transform 0.8s ease; }
         .img-zoom:hover img { transform: scale(1.05); }
 
-        .marquee-container { display: flex; width: 200%; }
-        .marquee-container:hover { animation-play-state: paused; }
-
-        #lightbox {
-            opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
-            backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
-        }
-        #lightbox.active { opacity: 1; pointer-events: auto; }
-        #lightbox img { transform: scale(0.9); transition: transform 0.4s ease; }
-        #lightbox.active img { transform: scale(1); }
-        
         .service-card { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
         .service-card:hover {
             transform: translateY(-8px) scale(1.01);
             box-shadow: 0 25px 50px -12px rgba(197, 168, 124, 0.2);
             border-color: #C5A87C;
         }
+
+        /* Modal Styles */
+        body.modal-open { overflow: hidden; }
+        #article-modal.show { display: flex !important; }
+        #article-modal.show .modal-content { transform: scale(1); opacity: 1; }
     </style>
 
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -124,7 +113,6 @@
                     <a href="#about" class="text-sm font-semibold text-therapy-dark hover:text-therapy-gold transition-colors">ΣΧΕΤΙΚΑ ΜΕ ΕΜΕΝΑ</a>
                     <a href="#methods" class="text-sm font-semibold text-therapy-dark hover:text-therapy-gold transition-colors">ΠΡΟΣΕΓΓΙΣΗ & ΥΠΗΡΕΣΙΕΣ</a>
                     <a href="#articles" class="text-sm font-semibold text-therapy-dark hover:text-therapy-gold transition-colors">ΑΡΘΡΑ</a>
-                    <a href="#gallery" class="text-sm font-semibold text-therapy-dark hover:text-therapy-gold transition-colors">ΦΩΤΟΓΡΑΦΙΕΣ</a>
                     <a href="#contact" class="px-7 py-2.5 bg-therapy-gold text-white rounded-full text-sm font-semibold hover:bg-therapy-dark hover:shadow-gold transition-all transform hover:-translate-y-0.5">ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ</a>
                 </div>
 
@@ -138,7 +126,6 @@
             <a href="#about" class="text-lg font-medium text-therapy-dark mobile-link">ΣΧΕΤΙΚΑ ΜΕ ΕΜΕΝΑ</a>
             <a href="#methods" class="text-lg font-medium text-therapy-dark mobile-link">ΠΡΟΣΕΓΓΙΣΗ & ΥΠΗΡΕΣΙΕΣ</a>
             <a href="#articles" class="text-lg font-medium text-therapy-dark mobile-link">ΑΡΘΡΑ</a>
-            <a href="#gallery" class="text-lg font-medium text-therapy-dark mobile-link">ΦΩΤΟΓΡΑΦΙΕΣ</a>
             <a href="#contact" class="px-8 py-3 bg-therapy-gold text-white rounded-full text-lg font-medium mobile-link">ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ</a>
         </div>
     </nav>
@@ -177,7 +164,7 @@
             
             <div class="lg:col-span-5 relative reveal hidden lg:block">
                 <div class="aspect-[3/4] rounded-[2rem] overflow-hidden shadow-soft border border-therapy-gold/20 img-zoom relative z-10">
-                    <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/94b2014a9b6037fcdb55a99f52535ca06c54856c/1000022529.jpg" alt="Χριστίνα Αλάτση Βιβλιοθήκη" class="w-full h-full object-cover object-center">
+                    <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/94b2014a9b6037fcdb55a99f52535ca06c54856c/1000022524.jpg" alt="Χριστίνα Αλάτση" class="w-full h-full object-cover object-center">
                 </div>
                 <div class="absolute -bottom-8 -left-8 w-40 h-40 bg-therapy-lightgold rounded-full z-0"></div>
                 <div class="absolute -top-8 -right-8 w-24 h-24 bg-therapy-gold/20 rounded-full z-0"></div>
@@ -189,7 +176,7 @@
                 
                 <div class="relative reveal block lg:hidden mb-10 mt-4">
                     <div class="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-soft border border-therapy-gold/20 img-zoom relative z-10">
-                        <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/94b2014a9b6037fcdb55a99f52535ca06c54856c/1000022529.jpg" alt="Χριστίνα Αλάτση Βιβλιοθήκη" class="w-full h-full object-cover object-center">
+                        <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/94b2014a9b6037fcdb55a99f52535ca06c54856c/1000022524.jpg" alt="Χριστίνα Αλάτση" class="w-full h-full object-cover object-center">
                     </div>
                 </div>
                 
@@ -302,25 +289,18 @@
                 </p>
             </div>
 
-            <div class="mt-10 grid lg:grid-cols-12 gap-10 items-center bg-white p-10 lg:p-12 rounded-[2rem] border border-therapy-gold/20 shadow-soft reveal">
-                <div class="lg:col-span-7">
-                    <h3 class="text-3xl font-serif font-bold text-therapy-dark mb-6">Ανθοϊάματα Bach</h3>
-                    <div class="space-y-4 text-therapy-text leading-relaxed">
-                        <p>
-                            Τα ανθοϊάματα Bach είναι φυσικά εκχυλίσματα από άνθη φυτών που χρησιμοποιούνται για την εξισορρόπηση των συναισθημάτων και τη διαχείριση του ψυχικού στρες. Δημιουργήθηκαν από τον Άγγλο ιατρό και ερευνητή Edward Bach τη δεκαετία του 1930. Η φιλοσοφία τους βασίζεται στην ιδέα ότι πολλά σωματικά και ψυχικά προβλήματα συνδέονται με τη συναισθηματική μας κατάσταση.
-                        </p>
-                        <p>
-                            Κάθε ανθοΐαμα αντιστοιχεί σε μια συγκεκριμένη συναισθηματική κατάσταση, όπως: φόβος, άγχος, ανασφάλεια, θλίψη, υπερβολική ανησυχία, έλλειψη αυτοπεποίθησης.
-                        </p>
-                        <p>
-                            Τα ανθοϊάματα δεν καταστέλλουν τα συναισθήματα. Αντίθετα, βοηθούν τον οργανισμό να επαναφέρει τη φυσική του ισορροπία και να διαχειριστεί πιο ήρεμα τις συναισθηματικές προκλήσεις. Η επιλογή των ανθοϊαμάτων γίνεται εξατομικευμένα, ανάλογα με τις ανάγκες και την ψυχική κατάσταση του κάθε ανθρώπου.
-                        </p>
-                    </div>
-                </div>
-                <div class="lg:col-span-5">
-                    <div class="aspect-square rounded-[2rem] overflow-hidden border border-therapy-gold/30 shadow-md">
-                        <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/94b2014a9b6037fcdb55a99f52535ca06c54856c/1000022524.jpg" alt="Ανθοϊάματα Bach Μπουκαλάκια" class="w-full h-full object-cover">
-                    </div>
+            <div class="mt-10 bg-white p-10 lg:p-12 rounded-[2rem] border border-therapy-gold/20 shadow-soft reveal">
+                <h3 class="text-3xl font-serif font-bold text-therapy-dark mb-6">Ανθοϊάματα Bach</h3>
+                <div class="space-y-4 text-therapy-text leading-relaxed">
+                    <p>
+                        Τα ανθοϊάματα Bach είναι φυσικά εκχυλίσματα από άνθη φυτών που χρησιμοποιούνται για την εξισορρόπηση των συναισθημάτων και τη διαχείριση του ψυχικού στρες. Δημιουργήθηκαν από τον Άγγλο ιατρό και ερευνητή Edward Bach τη δεκαετία του 1930. Η φιλοσοφία τους βασίζεται στην ιδέα ότι πολλά σωματικά και ψυχικά προβλήματα συνδέονται με τη συναισθηματική μας κατάσταση.
+                    </p>
+                    <p>
+                        Κάθε ανθοΐαμα αντιστοιχεί σε μια συγκεκριμένη συναισθηματική κατάσταση, όπως: φόβος, άγχος, ανασφάλεια, θλίψη, υπερβολική ανησυχία, έλλειψη αυτοπεποίθησης.
+                    </p>
+                    <p>
+                        Τα ανθοϊάματα δεν καταστέλλουν τα συναισθήματα. Αντίθετα, βοηθούν τον οργανισμό να επαναφέρει τη φυσική του ισορροπία και να διαχειριστεί πιο ήρεμα τις συναισθηματικές προκλήσεις. Η επιλογή των ανθοϊαμάτων γίνεται εξατομικευμένα, ανάλογα με τις ανάγκες και την ψυχική κατάσταση του κάθε ανθρώπου.
+                    </p>
                 </div>
             </div>
 
@@ -340,30 +320,15 @@
         </div>
     </section>
 
-    <section id="gallery" class="py-24 px-6 bg-white border-t border-therapy-lightgold">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-8">
-                <button class="w-full rounded-[2rem] overflow-hidden group relative reveal shadow-soft border border-therapy-gold/20" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/Image-hosting-/94b2014a9b6037fcdb55a99f52535ca06c54856c/1000022529.jpg')">
-                    <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/94b2014a9b6037fcdb55a99f52535ca06c54856c/1000022529.jpg" alt="Gallery Image 1" class="w-full aspect-video object-cover transform group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-therapy-dark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <i data-lucide="zoom-in" class="w-10 h-10 text-therapy-gold"></i>
-                    </div>
-                </button>
-                <button class="w-full rounded-[2rem] overflow-hidden group relative reveal reveal-delay-1 shadow-soft border border-therapy-gold/20" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/Image-hosting-/94b2014a9b6037fcdb55a99f52535ca06c54856c/1000022524.jpg')">
-                    <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/94b2014a9b6037fcdb55a99f52535ca06c54856c/1000022524.jpg" alt="Gallery Image 2" class="w-full aspect-video object-cover transform group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-therapy-dark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <i data-lucide="zoom-in" class="w-10 h-10 text-therapy-gold"></i>
-                    </div>
-                </button>
-            </div>
+    <div id="article-modal" class="fixed inset-0 z-[110] bg-therapy-dark/80 backdrop-blur-sm hidden items-center justify-center p-4 transition-all duration-300 opacity-0">
+        <div class="modal-content bg-white w-full max-w-3xl max-h-[85vh] overflow-y-auto rounded-3xl p-8 md:p-12 relative shadow-2xl transform scale-95 transition-all duration-300">
+            <button onclick="closeArticleModal()" class="absolute top-6 right-6 text-therapy-text hover:text-therapy-gold transition-colors bg-therapy-lightgold rounded-full p-2">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <span id="modal-date" class="text-xs font-bold text-therapy-gold uppercase tracking-wider mb-3 block"></span>
+            <h3 id="modal-title" class="text-3xl font-serif text-therapy-dark mb-6"></h3>
+            <div id="modal-body" class="text-therapy-text leading-relaxed space-y-4"></div>
         </div>
-    </section>
-
-    <div id="lightbox" class="fixed inset-0 z-[100] bg-therapy-dark/95 flex items-center justify-center cursor-zoom-out" onclick="closeLightbox()">
-        <button class="absolute top-6 right-6 text-white hover:text-therapy-gold transition-colors">
-            <i data-lucide="x" class="w-10 h-10"></i>
-        </button>
-        <img id="lightbox-img" src="" alt="Enlarged View" class="max-w-[90vw] max-h-[90vh] object-contain rounded-xl shadow-2xl cursor-default" onclick="event.stopPropagation()">
     </div>
 
     <footer id="contact" class="bg-therapy-dark text-white pt-24 pb-10 relative overflow-hidden">
@@ -474,26 +439,46 @@
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        // Lightbox Functionality
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
+        // Articles Array & Modal Logic
+        let fetchedArticles = [];
+        const articleModal = document.getElementById('article-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDate = document.getElementById('modal-date');
+        const modalBody = document.getElementById('modal-body');
 
-        function openLightbox(imageSrc) {
-            lightboxImg.src = imageSrc;
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            lightbox.classList.remove('active');
+        function openArticleModal(index) {
+            const article = fetchedArticles[index];
+            if (!article) return;
+            
+            modalTitle.innerText = article.title;
+            modalDate.innerText = article.date;
+            modalBody.innerHTML = article.fullBody;
+            
+            articleModal.classList.remove('hidden');
+            // Timeout to allow display:flex to apply before animating opacity
             setTimeout(() => {
-                lightboxImg.src = '';
-                document.body.style.overflow = '';
-            }, 400);
+                articleModal.classList.add('show');
+                articleModal.classList.remove('opacity-0');
+            }, 10);
+            
+            document.body.classList.add('modal-open');
         }
 
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+        function closeArticleModal() {
+            articleModal.classList.remove('show');
+            articleModal.classList.add('opacity-0');
+            
+            setTimeout(() => {
+                articleModal.classList.add('hidden');
+                document.body.classList.remove('modal-open');
+            }, 300);
+        }
+
+        // Close modal on outside click
+        articleModal.addEventListener('click', (e) => {
+            if (e.target === articleModal) {
+                closeArticleModal();
+            }
         });
 
         // Contentful Integration for Articles
@@ -508,6 +493,21 @@
             return new Date(dateString).toLocaleDateString('el-GR', options);
         }
 
+        // Extracts plain text for the preview snippet
+        function getPlainText(field) {
+            if (!field) return '';
+            if (field.nodeType === 'document') {
+                return field.content.map(node => {
+                    if (node.nodeType === 'paragraph') {
+                        return node.content.map(c => c.value).join('');
+                    }
+                    return '';
+                }).join(' ');
+            }
+            return field.toString();
+        }
+
+        // Renders full HTML for the popup
         function renderBody(field) {
             if (!field) return ''; 
             if (field.nodeType === 'document') { 
@@ -532,19 +532,31 @@
 
                 container.innerHTML = ""; 
 
-                response.items.forEach(entry => {
-                    const title = entry.fields.title || "Χωρίς Τίτλο";
-                    const body = renderBody(entry.fields.body); 
-                    const date = formatDate(entry.sys.createdAt);
+                fetchedArticles = response.items.map(entry => {
+                    const plainText = getPlainText(entry.fields.body);
+                    // Preview cuts off exactly around the requested mark or dynamically handles generic articles
+                    const previewText = plainText.length > 320 ? plainText.substring(0, 320).trim() + '...' : plainText;
 
-                    container.innerHTML += `
-                        <div class="bg-white border border-therapy-gold/20 p-8 rounded-2xl shadow-soft hover:-translate-y-1 transition-transform">
-                            <span class="text-xs font-bold text-therapy-gold uppercase tracking-wider mb-3 block">${date}</span>
-                            <h3 class="text-2xl font-serif text-therapy-dark mb-4">${title}</h3>
-                            <div class="text-therapy-text leading-relaxed text-sm">${body}</div>
-                        </div>
-                    `;
+                    return {
+                        title: entry.fields.title || "Χωρίς Τίτλο",
+                        date: formatDate(entry.sys.createdAt),
+                        fullBody: renderBody(entry.fields.body),
+                        excerpt: previewText
+                    };
                 });
+
+                container.innerHTML = fetchedArticles.map((art, index) => `
+                    <div class="bg-white border border-therapy-gold/20 p-8 rounded-2xl shadow-soft flex flex-col h-full hover:-translate-y-1 transition-transform">
+                        <span class="text-xs font-bold text-therapy-gold uppercase tracking-wider mb-3 block">${art.date}</span>
+                        <h3 class="text-2xl font-serif text-therapy-dark mb-4">${art.title}</h3>
+                        <p class="text-therapy-text leading-relaxed text-sm mb-6 flex-grow">${art.excerpt}</p>
+                        <button onclick="openArticleModal(${index})" class="text-therapy-gold font-bold text-sm flex items-center gap-1 hover:text-therapy-dark transition-colors mt-auto w-max">
+                            Διαβάστε περισσότερα <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                `).join('');
+                
+                lucide.createIcons(); // Re-initialize icons for the new buttons
             })
             .catch((error) => {
                 console.error(error);
