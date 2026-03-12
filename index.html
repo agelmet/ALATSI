@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="el" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Enable Therapy | Χριστίνα Αλάτση - Ψυχοθεραπεία & Συμβουλευτική</title>
+    <meta name="description" content="Ολιστική φροντίδα ψυχής και σώματος. Συνθετική ψυχοθεραπεία, κλινική υπνοθεραπεία και ολιστικές μέθοδοι από την Χριστίνα Αλάτση.">
+    <meta name="keywords" content="Enable Therapy, Χριστίνα Αλάτση, Ψυχολόγος, Συμβουλευτική, Κλινική Ύπνωση, Ανθοϊάματα Bach, Ωτοθεραπεία">
+    <meta name="author" content="Advon Media">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="icon" href="https://github.com/agelmet/Image-hosting-/blob/main/Gemini_Generated_Image_lejoi5lejoi5lejo.png?raw=true" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        therapy: {
+                            bg: '#F9F8F6',       // Warm off-white/ivory
+                            earth: '#8B7D71',    // Soft earth tone
+                            dark: '#4A4138',     // Deep earth brown
+                            gold: '#C5A87C',     // Elegant gold accent
+                            lightgold: '#F4F0E8',// Very light golden/beige background
+                            text: '#5A524A'      // Softened dark text for readability
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 32px 0 rgba(197, 168, 124, 0.1)',
+                        'soft': '0 20px 40px -15px rgba(74, 65, 56, 0.08)',
+                        'gold': '0 4px 20px rgba(197, 168, 124, 0.3)',
+                    },
+                    animation: {
+                        'blob': 'blob 10s infinite',
+                        'marquee': 'marquee 40s linear infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Smooth Custom Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #F9F8F6; }
+        ::-webkit-scrollbar-thumb { background: #C5A87C; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #8B7D71; }
+
+        .no-accents { text-transform: uppercase; }
+        html[lang="el"] .no-accents { font-feature-settings: "ss01"; }
+
+        /* Reveal Animations */
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.5, 0, 0, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .reveal-delay-1 { transition-delay: 0.15s; }
+        .reveal-delay-2 { transition-delay: 0.3s; }
+
+        /* Glassmorphism for better text readability */
+        .glass-panel {
+            background: rgba(249, 248, 246, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(197, 168, 124, 0.4);
+        }
+
+        .img-zoom { overflow: hidden; }
+        .img-zoom img { transition: transform 0.8s ease; }
+        .img-zoom:hover img { transform: scale(1.05); }
+
+        .marquee-container { display: flex; width: 200%; }
+        .marquee-container:hover { animation-play-state: paused; }
+
+        #lightbox {
+            opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
+            backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+        }
+        #lightbox.active { opacity: 1; pointer-events: auto; }
+        #lightbox img { transform: scale(0.9); transition: transform 0.4s ease; }
+        #lightbox.active img { transform: scale(1); }
+        
+        .service-card { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .service-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 25px 50px -12px rgba(197, 168, 124, 0.2);
+            border-color: #C5A87C;
+        }
+    </style>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-therapy-bg text-therapy-text font-sans antialiased overflow-x-hidden selection:bg-therapy-gold selection:text-white">
+
+    <nav class="fixed w-full z-50 transition-all duration-300 py-4" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="glass-panel rounded-full flex justify-between items-center px-6 py-2 shadow-glass">
+                <a href="#" class="flex items-center gap-3 group">
+                    <img src="https://github.com/agelmet/Image-hosting-/blob/main/Gemini_Generated_Image_lejoi5lejoi5lejo.png?raw=true" alt="Enable Therapy Logo" class="h-20 md:h-24 w-auto drop-shadow-md transition-transform duration-500 group-hover:scale-105">
+                </a>
+                
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#about" class="text-sm font-semibold text-therapy-dark hover:text-therapy-gold transition-colors">ΣΧΕΤΙΚΑ ΜΕ ΕΜΕΝΑ</a>
+                    <a href="#methods" class="text-sm font-semibold text-therapy-dark hover:text-therapy-gold transition-colors">ΠΡΟΣΕΓΓΙΣΗ & ΥΠΗΡΕΣΙΕΣ</a>
+                    <a href="#articles" class="text-sm font-semibold text-therapy-dark hover:text-therapy-gold transition-colors">ΑΡΘΡΑ</a>
+                    <a href="#gallery" class="text-sm font-semibold text-therapy-dark hover:text-therapy-gold transition-colors">ΦΩΤΟΓΡΑΦΙΕΣ</a>
+                    <a href="#contact" class="px-7 py-2.5 bg-therapy-gold text-white rounded-full text-sm font-semibold hover:bg-therapy-dark hover:shadow-gold transition-all transform hover:-translate-y-0.5">ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ</a>
+                </div>
+
+                <button class="lg:hidden text-therapy-dark focus:outline-none" id="mobile-menu-btn">
+                    <i data-lucide="menu" class="w-8 h-8"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-therapy-bg/95 backdrop-blur-xl shadow-xl hidden flex-col items-center py-8 space-y-6 border-t border-therapy-gold/20">
+            <a href="#about" class="text-lg font-medium text-therapy-dark mobile-link">ΣΧΕΤΙΚΑ ΜΕ ΕΜΕΝΑ</a>
+            <a href="#methods" class="text-lg font-medium text-therapy-dark mobile-link">ΠΡΟΣΕΓΓΙΣΗ & ΥΠΗΡΕΣΙΕΣ</a>
+            <a href="#articles" class="text-lg font-medium text-therapy-dark mobile-link">ΑΡΘΡΑ</a>
+            <a href="#gallery" class="text-lg font-medium text-therapy-dark mobile-link">ΦΩΤΟΓΡΑΦΙΕΣ</a>
+            <a href="#contact" class="px-8 py-3 bg-therapy-gold text-white rounded-full text-lg font-medium mobile-link">ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ</a>
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center pt-32 pb-20 px-4 md:px-10 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/94b2014a9b6037fcdb55a99f52535ca06c54856c/1000022527.jpg" alt="Χριστίνα Αλάτση Ψυχολόγος Background" class="w-full h-full object-cover object-center lg:object-right-top">
+            <div class="absolute inset-0 bg-gradient-to-r from-therapy-bg/95 via-therapy-bg/70 to-transparent"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto w-full relative z-20">
+            <div class="max-w-2xl reveal glass-panel p-8 md:p-12 rounded-[2rem] shadow-soft">
+                <h1 class="text-4xl lg:text-6xl font-serif text-therapy-dark leading-[1.2] mb-4 drop-shadow-sm">
+                    Ολιστική Φροντίδα <br><span class="text-therapy-gold italic">Ψυχής και Σώματος</span>
+                </h1>
+                <h2 class="text-xl font-medium text-therapy-earth mb-6 border-b border-therapy-gold/30 pb-4">
+                    Σύμβουλος ψυχικής υγείας, ψυχοθεραπεύτρια συνθετικής προσέγγισης, υπνοθεραπεύτρια και εναλλακτική θεραπεύτρια.
+                </h2>
+                <p class="text-lg text-therapy-text mb-10 leading-relaxed font-medium">
+                    Στη δουλειά μου συνδυάζω ψυχοθεραπεία, υπνοθεραπεία και ολιστικές μεθόδους, με στόχο να βοηθήσω τον άνθρωπο να κατανοήσει βαθύτερα τον εαυτό του, να διαχειριστεί το άγχος και να επαναφέρει την εσωτερική του ισορροπία.
+                </p>
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="#contact" class="px-8 py-4 bg-therapy-gold text-white rounded-full font-semibold hover:bg-therapy-dark transition-all shadow-gold flex items-center gap-2 group">
+                        ΞΕΚΙΝΗΣΤΕ ΣΗΜΕΡΑ
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 bg-white relative overflow-hidden">
+        <div class="absolute top-[-10%] right-[-5%] w-[40vw] h-[40vw] rounded-full bg-therapy-lightgold mix-blend-multiply filter blur-[100px] animate-blob" style="animation-delay: 0s;"></div>
+
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 items-center relative z-10">
+            
+            <div class="lg:col-span-5 relative reveal hidden lg:block">
+                <div class="aspect-[3/4] rounded-[2rem] overflow-hidden shadow-soft border border-therapy-gold/20 img-zoom relative z-10">
+                    <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/94b2014a9b6037fcdb55a99f52535ca06c54856c/1000022529.jpg" alt="Χριστίνα Αλάτση Βιβλιοθήκη" class="w-full h-full object-cover object-center">
+                </div>
+                <div class="absolute -bottom-8 -left-8 w-40 h-40 bg-therapy-lightgold rounded-full z-0"></div>
+                <div class="absolute -top-8 -right-8 w-24 h-24 bg-therapy-gold/20 rounded-full z-0"></div>
+            </div>
+
+            <div class="lg:col-span-7 reveal reveal-delay-2">
+                <h2 class="text-4xl font-serif text-therapy-dark mb-4">Χριστίνα Αλάτση</h2>
+                <h3 class="text-xl text-therapy-gold font-medium mb-8">Σύμβουλος ψυχικής υγείας, ψυχοθεραπεύτρια συνθετικής προσέγγισης, υπνοθεραπεύτρια και εναλλακτική θεραπεύτρια.</h3>
+                
+                <div class="relative reveal block lg:hidden mb-10 mt-4">
+                    <div class="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-soft border border-therapy-gold/20 img-zoom relative z-10">
+                        <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/94b2014a9b6037fcdb55a99f52535ca06c54856c/1000022529.jpg" alt="Χριστίνα Αλάτση Βιβλιοθήκη" class="w-full h-full object-cover object-center">
+                    </div>
+                </div>
+                
+                <div class="space-y-6 text-lg text-therapy-text leading-relaxed">
+                    <p>
+                        Η θεραπευτική μου προσέγγιση είναι <strong>συνθετική και ολιστική</strong>. Συνδυάζω εργαλεία από την ψυχοθεραπεία, την υπνοθεραπεία και ολιστικές πρακτικές, όπως ανθοϊάματα Bach και ωτοθεραπεία, προσαρμόζοντας πάντα τη θεραπεία στις ανάγκες του κάθε ανθρώπου.
+                    </p>
+                    <div class="bg-therapy-lightgold/50 p-6 rounded-2xl border border-therapy-gold/30 mt-8">
+                        <h4 class="text-2xl font-serif text-therapy-dark mb-3">Στόχος της θεραπείας</h4>
+                        <p class="text-therapy-text text-base">
+                            Στόχος της θεραπευτικής διαδικασίας δεν είναι μόνο η διαχείριση ενός προβλήματος, αλλά η βαθύτερη κατανόηση του εαυτού και η ενίσχυση της εσωτερικής δύναμης που διαθέτει κάθε άνθρωπος. Όταν ο άνθρωπος αρχίζει να κατανοεί τον εαυτό του και τα συναισθήματά του, μπορεί να δημιουργήσει περισσότερη ισορροπία, ηρεμία και νόημα στη ζωή του.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-therapy-dark text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-16 reveal">
+                <i data-lucide="graduation-cap" class="w-12 h-12 text-therapy-gold mx-auto mb-4"></i>
+                <h2 class="text-4xl font-serif text-white mb-4">Εκπαίδευση & Σεμινάρια</h2>
+                <div class="w-24 h-1 bg-therapy-gold mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                <div class="bg-white/5 border border-therapy-gold/30 p-8 rounded-2xl reveal hover:bg-white/10 transition">
+                    <div class="flex gap-4">
+                        <i data-lucide="check-circle-2" class="w-6 h-6 text-therapy-gold shrink-0 mt-1"></i>
+                        <p class="text-gray-200 leading-relaxed">Σπουδές με Άριστα στην Συνθετική Συμβουλευτική και Ψυχολογία, καθώς και Κλινική Ύπνωση - Υπνοθεραπεία στο ΟΛΟΝ Education - ΚΔΒΜ1, Ινστιτούτο Ακαδημαϊκών και Επαγγελματικών Σπουδών.</p>
+                    </div>
+                </div>
+                <div class="bg-white/5 border border-therapy-gold/30 p-8 rounded-2xl reveal reveal-delay-1 hover:bg-white/10 transition">
+                    <div class="flex gap-4">
+                        <i data-lucide="check-circle-2" class="w-6 h-6 text-therapy-gold shrink-0 mt-1"></i>
+                        <p class="text-gray-200 leading-relaxed">Post-Graduate Diploma in Integrative Psychotherapy από το Amsterdam International College (με Άριστα).</p>
+                    </div>
+                </div>
+                <div class="bg-white/5 border border-therapy-gold/30 p-8 rounded-2xl reveal hover:bg-white/10 transition">
+                    <div class="flex gap-4">
+                        <i data-lucide="check-circle-2" class="w-6 h-6 text-therapy-gold shrink-0 mt-1"></i>
+                        <p class="text-gray-200 leading-relaxed">Ετήσιο σεμινάριο Ανατομίας και Φυσιολογίας με Ολιστική προσέγγιση (με Άριστα).</p>
+                    </div>
+                </div>
+                <div class="bg-white/5 border border-therapy-gold/30 p-8 rounded-2xl reveal reveal-delay-1 hover:bg-white/10 transition">
+                    <div class="flex gap-4">
+                        <i data-lucide="check-circle-2" class="w-6 h-6 text-therapy-gold shrink-0 mt-1"></i>
+                        <p class="text-gray-200 leading-relaxed">Εκπαίδευση στα Ανθοϊάματα Bach, στην Ωτική Νευροαντανακλαστική Μέθοδο και στο Gua Sha.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="methods" class="py-24 px-6 bg-therapy-lightgold/40 relative">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl font-serif text-therapy-dark mb-4">Θεματολογία που δουλεύω</h2>
+                <div class="w-24 h-1 bg-therapy-gold mx-auto rounded-full mb-10"></div>
+                <div class="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+                    <span class="px-5 py-2 bg-white border border-therapy-gold/40 text-therapy-dark font-medium rounded-full shadow-sm">Άγχος</span>
+                    <span class="px-5 py-2 bg-white border border-therapy-gold/40 text-therapy-dark font-medium rounded-full shadow-sm">Στρες</span>
+                    <span class="px-5 py-2 bg-white border border-therapy-gold/40 text-therapy-dark font-medium rounded-full shadow-sm">Φοβίες</span>
+                    <span class="px-5 py-2 bg-white border border-therapy-gold/40 text-therapy-dark font-medium rounded-full shadow-sm">Κρίσεις πανικού</span>
+                    <span class="px-5 py-2 bg-white border border-therapy-gold/40 text-therapy-dark font-medium rounded-full shadow-sm">Αυτοεκτίμηση</span>
+                    <span class="px-5 py-2 bg-white border border-therapy-gold/40 text-therapy-dark font-medium rounded-full shadow-sm">Συμβουλευτική γονέων</span>
+                    <span class="px-5 py-2 bg-white border border-therapy-gold/40 text-therapy-dark font-medium rounded-full shadow-sm">Συναισθηματικές δυσκολίες</span>
+                    <span class="px-5 py-2 bg-white border border-therapy-gold/40 text-therapy-dark font-medium rounded-full shadow-sm">Εξισορρόπηση</span>
+                    <span class="px-5 py-2 bg-white border border-therapy-gold/40 text-therapy-dark font-medium rounded-full shadow-sm">Διαχείριση πένθους</span>
+                    <span class="px-5 py-2 bg-white border border-therapy-gold/40 text-therapy-dark font-medium rounded-full shadow-sm">Διαχείριση κατάθλιψης</span>
+                    <span class="px-5 py-2 bg-white border border-therapy-gold/40 text-therapy-dark font-medium rounded-full shadow-sm">Τεχνικές χαλάρωσης</span>
+                    <span class="px-5 py-2 bg-white border border-therapy-gold/40 text-therapy-dark font-medium rounded-full shadow-sm">Περίοδοι έντονων αλλαγών</span>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-10 mt-20">
+                <div class="service-card bg-white p-10 rounded-[2rem] border border-therapy-gold/20 shadow-soft reveal">
+                    <div class="w-14 h-14 bg-therapy-lightgold rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="sparkles" class="w-7 h-7 text-therapy-gold"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold text-therapy-dark mb-4">Κλινική Ύπνωση</h3>
+                    <p class="text-therapy-text leading-relaxed">
+                        Η κλινική ύπνωση/υπνοθεραπεία είναι μια βαθιά χαλαρωτική διαδικασία που επιτρέπει την πρόσβαση στο υποσυνείδητο και βοηθά στην επεξεργασία βαθύτερων συναισθημάτων, φόβων και πεποιθήσεων.
+                    </p>
+                </div>
+
+                <div class="service-card bg-white p-10 rounded-[2rem] border border-therapy-gold/20 shadow-soft reveal reveal-delay-1">
+                    <div class="w-14 h-14 bg-therapy-lightgold rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="leaf" class="w-7 h-7 text-therapy-gold"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold text-therapy-dark mb-4">Ολιστική Υποστήριξη</h3>
+                    <ul class="space-y-3 text-therapy-text">
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="w-5 h-5 text-therapy-gold"></i> Ανθοϊάματα Bach</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="w-5 h-5 text-therapy-gold"></i> Ωτοθεραπεία / ωτικό acupressure</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="w-5 h-5 text-therapy-gold"></i> Τεχνικές χαλάρωσης</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-10 service-card bg-white p-10 lg:p-12 rounded-[2rem] border border-therapy-gold/20 shadow-soft reveal">
+                <h3 class="text-3xl font-serif font-bold text-therapy-dark mb-6">Ωτοθεραπεία</h3>
+                <p class="text-therapy-text leading-relaxed mb-6">
+                    Η ωτοθεραπεία είναι μια ήπια και ασφαλής μέθοδος που βασίζεται στη διέγερση συγκεκριμένων σημείων στο αυτί, με στόχο την ενεργοποίηση του νευρικού συστήματος και την προώθηση της ψυχικής και σωματικής ισορροπίας.
+                </p>
+                <h4 class="text-xl font-bold text-therapy-earth mb-3">Το αυτί ως χαρτογράφηση του οργανισμού</h4>
+                <p class="text-therapy-text leading-relaxed">
+                    Στην ωτοθεραπεία, το αυτί θεωρείται μικροσύμπαν του σώματος. Κάθε σημείο του αυτιού αντιστοιχεί σε συγκεκριμένα όργανα, συστήματα και λειτουργίες του οργανισμού, δημιουργώντας μια πλήρη χαρτογράφηση του σώματος και της ψυχής. Με την κατάλληλη διέγερση αυτών των σημείων, μπορούμε να επηρεάσουμε τη λειτουργία του νευρικού συστήματος, να ενεργοποιήσουμε τη φυσική ικανότητα του σώματος να αυτορρυθμιστεί, να υποστηρίξουμε τη διαχείριση άγχους, φόβου και σωματικών εντάσεων και να ενισχύσουμε τη συνολική ισορροπία και ευεξία.
+                </p>
+            </div>
+
+            <div class="mt-10 grid lg:grid-cols-12 gap-10 items-center bg-white p-10 lg:p-12 rounded-[2rem] border border-therapy-gold/20 shadow-soft reveal">
+                <div class="lg:col-span-7">
+                    <h3 class="text-3xl font-serif font-bold text-therapy-dark mb-6">Ανθοϊάματα Bach</h3>
+                    <div class="space-y-4 text-therapy-text leading-relaxed">
+                        <p>
+                            Τα ανθοϊάματα Bach είναι φυσικά εκχυλίσματα από άνθη φυτών που χρησιμοποιούνται για την εξισορρόπηση των συναισθημάτων και τη διαχείριση του ψυχικού στρες. Δημιουργήθηκαν από τον Άγγλο ιατρό και ερευνητή Edward Bach τη δεκαετία του 1930. Η φιλοσοφία τους βασίζεται στην ιδέα ότι πολλά σωματικά και ψυχικά προβλήματα συνδέονται με τη συναισθηματική μας κατάσταση.
+                        </p>
+                        <p>
+                            Κάθε ανθοΐαμα αντιστοιχεί σε μια συγκεκριμένη συναισθηματική κατάσταση, όπως: φόβος, άγχος, ανασφάλεια, θλίψη, υπερβολική ανησυχία, έλλειψη αυτοπεποίθησης.
+                        </p>
+                        <p>
+                            Τα ανθοϊάματα δεν καταστέλλουν τα συναισθήματα. Αντίθετα, βοηθούν τον οργανισμό να επαναφέρει τη φυσική του ισορροπία και να διαχειριστεί πιο ήρεμα τις συναισθηματικές προκλήσεις. Η επιλογή των ανθοϊαμάτων γίνεται εξατομικευμένα, ανάλογα με τις ανάγκες και την ψυχική κατάσταση του κάθε ανθρώπου.
+                        </p>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="aspect-square rounded-[2rem] overflow-hidden border border-therapy-gold/30 shadow-md">
+                        <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/94b2014a9b6037fcdb55a99f52535ca06c54856c/1000022524.jpg" alt="Ανθοϊάματα Bach Μπουκαλάκια" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="articles" class="py-24 px-6 bg-therapy-bg border-t border-therapy-gold/20">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl font-serif text-therapy-dark mb-4">Άρθρα & Σκέψεις</h2>
+                <div class="w-24 h-1 bg-therapy-gold mx-auto rounded-full"></div>
+            </div>
+
+            <div id="articles-list" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <p class="text-therapy-text text-center col-span-full">Φόρτωση άρθρων...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-24 px-6 bg-white border-t border-therapy-lightgold">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-8">
+                <button class="w-full rounded-[2rem] overflow-hidden group relative reveal shadow-soft border border-therapy-gold/20" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/Image-hosting-/94b2014a9b6037fcdb55a99f52535ca06c54856c/1000022529.jpg')">
+                    <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/94b2014a9b6037fcdb55a99f52535ca06c54856c/1000022529.jpg" alt="Gallery Image 1" class="w-full aspect-video object-cover transform group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-therapy-dark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <i data-lucide="zoom-in" class="w-10 h-10 text-therapy-gold"></i>
+                    </div>
+                </button>
+                <button class="w-full rounded-[2rem] overflow-hidden group relative reveal reveal-delay-1 shadow-soft border border-therapy-gold/20" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/Image-hosting-/94b2014a9b6037fcdb55a99f52535ca06c54856c/1000022524.jpg')">
+                    <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/94b2014a9b6037fcdb55a99f52535ca06c54856c/1000022524.jpg" alt="Gallery Image 2" class="w-full aspect-video object-cover transform group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-therapy-dark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <i data-lucide="zoom-in" class="w-10 h-10 text-therapy-gold"></i>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-therapy-dark/95 flex items-center justify-center cursor-zoom-out" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white hover:text-therapy-gold transition-colors">
+            <i data-lucide="x" class="w-10 h-10"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Enlarged View" class="max-w-[90vw] max-h-[90vh] object-contain rounded-xl shadow-2xl cursor-default" onclick="event.stopPropagation()">
+    </div>
+
+    <footer id="contact" class="bg-therapy-dark text-white pt-24 pb-10 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+                
+                <div class="lg:col-span-2 reveal">
+                    <p class="text-therapy-lightgold max-w-sm mb-8 text-lg leading-relaxed">
+                        Αν αισθάνεστε ότι αυτή είναι η κατάλληλη στιγμή για να ξεκινήσετε μια θεραπευτική διαδικασία ή θέλετε περισσότερες πληροφορίες, μπορείτε να επικοινωνήσετε για να προγραμματίσουμε μια πρώτη συνεδρία γνωριμίας.
+                    </p>
+                    <a href="https://www.doctoranytime.gr/d/Symvoulos-psychikis-ygeias/alatsi-xristina" target="_blank" class="inline-flex items-center justify-center bg-therapy-gold text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-therapy-dark transition-colors duration-300 shadow-gold">
+                        <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" class="h-4 mr-3 filter brightness-0 invert group-hover:filter-none">
+                        Κλείστε Ραντεβού
+                    </a>
+                </div>
+
+                <div class="reveal reveal-delay-1">
+                    <h4 class="text-lg font-bold text-therapy-gold mb-6 tracking-wider no-accents">ΣΤΟΙΧΕΙΑ ΕΠΙΚΟΙΝΩΝΙΑΣ</h4>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-therapy-gold shrink-0 mt-1"></i>
+                            <span>Αρμονίας 50-52,<br>Κυψέλη, Αττική</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-therapy-gold shrink-0"></i>
+                            <a href="tel:+306907301255" class="hover:text-white transition-colors">690 730 1255</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="flex gap-4 mt-8">
+                        <a href="https://www.instagram.com/christina_alatsi/" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-therapy-gold/30 flex items-center justify-center hover:bg-therapy-gold hover:text-white transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/julie-michalopoulou-a4431a193/?originalSubdomain=gr" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-therapy-gold/30 flex items-center justify-center hover:bg-therapy-gold hover:text-white transition-colors">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="reveal reveal-delay-2">
+                    <h4 class="text-lg font-bold text-therapy-gold mb-6 tracking-wider no-accents">ΩΡΑΡΙΟ ΛΕΙΤΟΥΡΓΙΑΣ</h4>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="clock" class="w-5 h-5 text-therapy-gold shrink-0"></i>
+                            <span class="no-accents">ΔΕΥΤΕΡΑ - ΠΑΡΑΣΚΕΥΗ</span>
+                        </li>
+                        <li class="pl-8 text-sm text-therapy-lightgold font-medium no-accents">ΚΑΤΟΠΙΝ ΡΑΝΤΕΒΟΥ</li>
+                        <li class="pl-8 mt-4 pt-4 border-t border-white/10 text-sm text-gray-400">
+                            Διάρκεια ατομικής συνεδρίας: 45 λεπτά
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 reveal">
+                <p class="text-gray-400 text-sm">© 2026 Enable Therapy. Όλα τα δικαιώματα διατηρούνται.</p>
+                <p class="text-gray-400 text-sm">
+                    Designed by <a href="https://advonmedia.com" target="_blank" rel="noopener" class="text-therapy-gold font-bold hover:text-white transition-colors">Advon Media</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+    <script>
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2', 'bg-therapy-bg/90', 'backdrop-blur-md');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2', 'bg-therapy-bg/90', 'backdrop-blur-md');
+            }
+        });
+
+        // Scroll Reveal Animations
+        const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Lightbox Functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(imageSrc) {
+            lightboxImg.src = imageSrc;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            setTimeout(() => {
+                lightboxImg.src = '';
+                document.body.style.overflow = '';
+            }, 400);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+        });
+
+        // Contentful Integration for Articles
+        const client = contentful.createClient({
+            space: 'y3azgejp6vsg', 
+            accessToken: 'Rp7H0B4XC0lF3dUq7fyn-b51IIwdTX3vdBOaNbeWp3w',
+            environment: 'master'
+        });
+
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString('el-GR', options);
+        }
+
+        function renderBody(field) {
+            if (!field) return ''; 
+            if (field.nodeType === 'document') { 
+                return field.content.map(node => {
+                    if (node.nodeType === 'paragraph') {
+                        return `<p class="mb-4">${node.content.map(c => c.value).join('')}</p>`;
+                    }
+                    return ''; 
+                }).join('');
+            }
+            return `<p>${field}</p>`;
+        }
+
+        client.getEntries({ order: '-sys.createdAt' })
+            .then((response) => {
+                const container = document.getElementById('articles-list');
+                
+                if (response.items.length === 0) {
+                    container.innerHTML = "<p class='text-center text-therapy-text col-span-full'>Δεν βρέθηκαν άρθρα. (Δοκιμάστε να δημοσιεύσετε ένα!)</p>";
+                    return;
+                }
+
+                container.innerHTML = ""; 
+
+                response.items.forEach(entry => {
+                    const title = entry.fields.title || "Χωρίς Τίτλο";
+                    const body = renderBody(entry.fields.body); 
+                    const date = formatDate(entry.sys.createdAt);
+
+                    container.innerHTML += `
+                        <div class="bg-white border border-therapy-gold/20 p-8 rounded-2xl shadow-soft hover:-translate-y-1 transition-transform">
+                            <span class="text-xs font-bold text-therapy-gold uppercase tracking-wider mb-3 block">${date}</span>
+                            <h3 class="text-2xl font-serif text-therapy-dark mb-4">${title}</h3>
+                            <div class="text-therapy-text leading-relaxed text-sm">${body}</div>
+                        </div>
+                    `;
+                });
+            })
+            .catch((error) => {
+                console.error(error);
+                document.getElementById('articles-list').innerHTML = `<p style="color:red" class="col-span-full text-center">Σφάλμα φόρτωσης: ${error.message}</p>`;
+            });
+    </script>
+</body>
+</html>
