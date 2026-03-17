@@ -24,12 +24,12 @@
                 extend: {
                     colors: {
                         therapy: {
-                            bg: '#F9F8F6',       // Warm off-white/ivory
-                            earth: '#8B7D71',    // Soft earth tone
-                            dark: '#4A4138',     // Deep earth brown
-                            gold: '#C5A87C',     // Elegant gold accent
-                            lightgold: '#F4F0E8',// Very light golden/beige background
-                            text: '#5A524A'      // Softened dark text for readability
+                            bg: '#F9F8F6',       
+                            earth: '#8B7D71',    
+                            dark: '#4A4138',     
+                            gold: '#C5A87C',     
+                            lightgold: '#F4F0E8',
+                            text: '#5A524A'      
                         }
                     },
                     fontFamily: {
@@ -58,7 +58,6 @@
     </script>
 
     <style>
-        /* Smooth Custom Scrollbar */
         ::-webkit-scrollbar { width: 10px; }
         ::-webkit-scrollbar-track { background: #F9F8F6; }
         ::-webkit-scrollbar-thumb { background: #C5A87C; border-radius: 5px; }
@@ -67,13 +66,11 @@
         .no-accents { text-transform: uppercase; }
         html[lang="el"] .no-accents { font-feature-settings: "ss01"; }
 
-        /* Reveal Animations */
         .reveal { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.5, 0, 0, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
         .reveal-delay-1 { transition-delay: 0.15s; }
         .reveal-delay-2 { transition-delay: 0.3s; }
 
-        /* Glassmorphism for better text readability */
         .glass-panel {
             background: rgba(249, 248, 246, 0.9);
             backdrop-filter: blur(12px);
@@ -92,7 +89,6 @@
             border-color: #C5A87C;
         }
 
-        /* Modal Styles */
         body.modal-open { overflow: hidden; }
         #article-modal.show { display: flex !important; }
         #article-modal.show .modal-content { transform: scale(1); opacity: 1; }
@@ -343,7 +339,7 @@
             </div>
 
             <div id="articles-list" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <p class="text-therapy-text text-center col-span-full">Φόρτωση άρθρων...</p>
+                <p class="text-therapy-text text-center col-span-full">Φόρτωση περιεχομένου...</p>
             </div>
         </div>
     </section>
@@ -428,7 +424,6 @@
     <script>
         lucide.createIcons();
 
-        // Mobile Menu Toggle
         const mobileBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
@@ -445,7 +440,6 @@
             });
         });
 
-        // Navbar Scroll Effect
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
@@ -457,7 +451,6 @@
             }
         });
 
-        // Scroll Reveal Animations
         const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
@@ -486,7 +479,6 @@
             modalBody.innerHTML = article.fullBody;
             
             articleModal.classList.remove('hidden');
-            // Timeout to allow display:flex to apply before animating opacity
             setTimeout(() => {
                 articleModal.classList.add('show');
                 articleModal.classList.remove('opacity-0');
@@ -505,17 +497,16 @@
             }, 300);
         }
 
-        // Close modal on outside click
         articleModal.addEventListener('click', (e) => {
             if (e.target === articleModal) {
                 closeArticleModal();
             }
         });
 
-        // Contentful Integration for Articles
+        // Contentful Integration
         const client = contentful.createClient({
-            space: 'y3azgejp6vsg', 
-            accessToken: 'Rp7H0B4XC0lF3dUq7fyn-b51IIwdTX3vdBOaNbeWp3w',
+            space: '5b36rtlpd69w', 
+            accessToken: 'M3usPdxReFkjJLBgY-x3ORkg8Ca02Ymsam-8ArzHfZg',
             environment: 'master'
         });
 
@@ -524,7 +515,6 @@
             return new Date(dateString).toLocaleDateString('el-GR', options);
         }
 
-        // Extracts plain text for the preview snippet
         function getPlainText(field) {
             if (!field) return '';
             if (field.nodeType === 'document') {
@@ -538,7 +528,6 @@
             return field.toString();
         }
 
-        // Renders full HTML for the popup
         function renderBody(field) {
             if (!field) return ''; 
             if (field.nodeType === 'document') { 
@@ -557,7 +546,7 @@
                 const container = document.getElementById('articles-list');
                 
                 if (response.items.length === 0) {
-                    container.innerHTML = "<p class='text-center text-therapy-text col-span-full'>Δεν βρέθηκαν άρθρα. (Δοκιμάστε να δημοσιεύσετε ένα!)</p>";
+                    container.innerHTML = "<p class='text-center text-therapy-text col-span-full'>Δεν βρέθηκαν δημοσιευμένα άρθρα.</p>";
                     return;
                 }
 
@@ -565,8 +554,8 @@
 
                 fetchedArticles = response.items.map(entry => {
                     const plainText = getPlainText(entry.fields.body);
-                    // Preview cuts off exactly around the requested mark or dynamically handles generic articles
-                    const previewText = plainText.length > 320 ? plainText.substring(0, 320).trim() + '...' : plainText;
+                    // Κόβουμε το κείμενο ακριβώς εκεί που ζήτησες
+                    const previewText = plainText.length > 295 ? plainText.substring(0, 295).trim() + '...' : plainText;
 
                     return {
                         title: entry.fields.title || "Χωρίς Τίτλο",
@@ -587,11 +576,14 @@
                     </div>
                 `).join('');
                 
-                lucide.createIcons(); // Re-initialize icons for the new buttons
+                lucide.createIcons();
             })
             .catch((error) => {
                 console.error(error);
-                document.getElementById('articles-list').innerHTML = `<p style="color:red" class="col-span-full text-center">Σφάλμα φόρτωσης: ${error.message}</p>`;
+                document.getElementById('articles-list').innerHTML = `
+                    <p style="color:red" class="col-span-full text-center">
+                        Σφάλμα σύνδεσης: Παρακαλώ ελέγξτε αν τα άρθρα έχουν γίνει "Publish".
+                    </p>`;
             });
     </script>
 </body>
