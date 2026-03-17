@@ -85,7 +85,7 @@
         .img-zoom img { transition: transform 0.8s ease; }
         .img-zoom:hover img { transform: scale(1.05); }
 
-        .service-card { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); height: 100%; display: flex; flex-direction: column;}
+        .service-card { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
         .service-card:hover {
             transform: translateY(-8px) scale(1.01);
             box-shadow: 0 25px 50px -12px rgba(197, 168, 124, 0.2);
@@ -254,72 +254,56 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mt-20">
-                
-                <div class="service-card lg:col-span-3 bg-white p-10 rounded-[2rem] border border-therapy-gold/20 shadow-soft reveal">
-                    <div class="w-14 h-14 bg-therapy-lightgold rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="user-circle" class="w-7 h-7 text-therapy-gold"></i>
-                    </div>
-                    <h3 class="text-2xl font-serif font-bold text-therapy-dark mb-4">Ψυχοθεραπεία & Προσωπική Ανάπτυξη</h3>
-                    <p class="text-therapy-text leading-relaxed flex-grow mb-6">
-                        Δημιουργούμε έναν απολύτως ασφαλή χώρο για την εις βάθος εξερεύνηση των σκέψεων, των συναισθημάτων και των εσωτερικών συγκρούσεων. Στόχος η ουσιαστική αυτογνωσία, η αναγνώριση και αλλαγή δυσλειτουργικών μοτίβων συμπεριφοράς, και η ενδυνάμωση του ατόμου για μια πιο ισορροπημένη ζωή.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="px-3 py-1 bg-therapy-bg border border-therapy-gold/30 text-xs font-bold rounded-full">Αυτογνωσία</span>
-                        <span class="px-3 py-1 bg-therapy-bg border border-therapy-gold/30 text-xs font-bold rounded-full">Βελτίωση Σχέσεων</span>
-                        <span class="px-3 py-1 bg-therapy-bg border border-therapy-gold/30 text-xs font-bold rounded-full">Αυτοεκτίμηση</span>
-                        <span class="px-3 py-1 bg-therapy-bg border border-therapy-gold/30 text-xs font-bold rounded-full">Εσωτερικές Συγκρούσεις</span>
-                    </div>
-                </div>
-
-                <div class="service-card lg:col-span-3 bg-white p-10 rounded-[2rem] border border-therapy-gold/20 shadow-soft reveal reveal-delay-1">
+            <div class="grid lg:grid-cols-2 gap-10 mt-20">
+                <div class="service-card bg-white p-10 rounded-[2rem] border border-therapy-gold/20 shadow-soft reveal">
                     <div class="w-14 h-14 bg-therapy-lightgold rounded-xl flex items-center justify-center mb-6">
                         <i data-lucide="heart-handshake" class="w-7 h-7 text-therapy-gold"></i>
                     </div>
                     <h3 class="text-2xl font-serif font-bold text-therapy-dark mb-4">Συναισθηματική Ενδυνάμωση</h3>
-                    <p class="text-therapy-text leading-relaxed flex-grow mb-6">
+                    <p class="text-therapy-text leading-relaxed">
                         Ένας ασφαλής χώρος ακρόασης για ενήλικες και εφήβους. Εργαζόμαστε μαζί για να κατανοήσετε τις δυσκολίες, να χτίσετε υγιή αυτοεκτίμηση και να βελτιώσετε τις σχέσεις σας. Καθοδήγηση για τις προκλήσεις της ανατροφής.
                     </p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="px-3 py-1 bg-therapy-bg border border-therapy-gold/30 text-xs font-bold rounded-full">Ατομική (45')</span>
-                        <span class="px-3 py-1 bg-therapy-bg border border-therapy-gold/30 text-xs font-bold rounded-full">Έφηβοι</span>
-                        <span class="px-3 py-1 bg-therapy-bg border border-therapy-gold/30 text-xs font-bold rounded-full">Ζεύγος & Οικογένεια</span>
-                        <span class="px-3 py-1 bg-therapy-bg border border-therapy-gold/30 text-xs font-bold rounded-full">Συμβουλευτική Γονέων</span>
-                    </div>
                 </div>
 
-                <div class="service-card lg:col-span-2 bg-white p-8 rounded-[2rem] border border-therapy-gold/20 shadow-soft reveal">
-                    <div class="w-12 h-12 bg-therapy-lightgold rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="cloud-lightning" class="w-6 h-6 text-therapy-gold"></i>
+                <div class="service-card bg-white p-10 rounded-[2rem] border border-therapy-gold/20 shadow-soft reveal reveal-delay-1">
+                    <div class="w-14 h-14 bg-therapy-lightgold rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="brain" class="w-7 h-7 text-therapy-gold"></i>
                     </div>
-                    <h3 class="text-xl font-serif font-bold text-therapy-dark mb-3">Διαχείριση Κρίσεων, Άγχους & Κατάθλιψης</h3>
-                    <p class="text-therapy-text leading-relaxed text-sm">
-                        Αναγνώριση σημάτων σε καταστάσεις πανικού. Στόχος η ανακούφιση από το συναισθηματικό βάρος και η επαναφορά της ηρεμίας.
+                    <h3 class="text-2xl font-serif font-bold text-therapy-dark mb-4">Ψυχοθεραπεία & Προσωπική Ανάπτυξη</h3>
+                    <p class="text-therapy-text leading-relaxed mb-6">
+                        Δημιουργούμε έναν απολύτως ασφαλή χώρο για την εις βάθος εξερεύνηση των σκέψεων, των συναισθημάτων και των εσωτερικών συγκρούσεων. Στόχος η ουσιαστική αυτογνωσία, η αναγνώριση και αλλαγή δυσλειτουργικών μοτίβων συμπεριφοράς, και η ενδυνάμωση του ατόμου για μια πιο ισορροπημένη ζωή.
                     </p>
-                </div>
-
-                <div class="service-card lg:col-span-2 bg-white p-8 rounded-[2rem] border border-therapy-gold/20 shadow-soft reveal reveal-delay-1">
-                    <div class="w-12 h-12 bg-therapy-lightgold rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="sparkles" class="w-6 h-6 text-therapy-gold"></i>
-                    </div>
-                    <h3 class="text-xl font-serif font-bold text-therapy-dark mb-3">Κλινική Ύπνωση</h3>
-                    <p class="text-therapy-text leading-relaxed text-sm">
-                        Μια βαθιά χαλαρωτική διαδικασία που επιτρέπει την πρόσβαση στο υποσυνείδητο και βοηθά στην επεξεργασία βαθύτερων φόβων και πεποιθήσεων.
-                    </p>
-                </div>
-
-                <div class="service-card lg:col-span-2 md:col-span-2 bg-white p-8 rounded-[2rem] border border-therapy-gold/20 shadow-soft reveal reveal-delay-2">
-                    <div class="w-12 h-12 bg-therapy-lightgold rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="leaf" class="w-6 h-6 text-therapy-gold"></i>
-                    </div>
-                    <h3 class="text-xl font-serif font-bold text-therapy-dark mb-3">Ολιστική Υποστήριξη</h3>
-                    <ul class="space-y-2 text-sm text-therapy-text">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-therapy-gold"></i> Ανθοϊάματα Bach</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-therapy-gold"></i> Ωτοθεραπεία</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-therapy-gold"></i> Τεχνικές χαλάρωσης</li>
+                    <ul class="space-y-3 text-therapy-text">
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-therapy-gold shrink-0 mt-0.5"></i> Αυτογνωσία & Προσωπική Εξέλιξη</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-therapy-gold shrink-0 mt-0.5"></i> Βελτίωση Διαπροσωπικών Σχέσεων</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-therapy-gold shrink-0 mt-0.5"></i> Ενίσχυση Αυτοεκτίμησης & Αυτοπεποίθησης</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-therapy-gold shrink-0 mt-0.5"></i> Αντιμετώπιση Εσωτερικών Συγκρούσεων</li>
                     </ul>
                 </div>
+            </div>
 
+            <div class="grid lg:grid-cols-2 gap-10 mt-10">
+                <div class="service-card bg-white p-10 rounded-[2rem] border border-therapy-gold/20 shadow-soft reveal">
+                    <div class="w-14 h-14 bg-therapy-lightgold rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="sparkles" class="w-7 h-7 text-therapy-gold"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold text-therapy-dark mb-4">Κλινική Ύπνωση</h3>
+                    <p class="text-therapy-text leading-relaxed">
+                        Η κλινική ύπνωση/υπνοθεραπεία είναι μια βαθιά χαλαρωτική διαδικασία που επιτρέπει την πρόσβαση στο υποσυνείδητο και βοηθά στην επεξεργασία βαθύτερων συναισθημάτων, φόβων και πεποιθήσεων.
+                    </p>
+                </div>
+
+                <div class="service-card bg-white p-10 rounded-[2rem] border border-therapy-gold/20 shadow-soft reveal reveal-delay-1">
+                    <div class="w-14 h-14 bg-therapy-lightgold rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="leaf" class="w-7 h-7 text-therapy-gold"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold text-therapy-dark mb-4">Ολιστική Υποστήριξη</h3>
+                    <ul class="space-y-3 text-therapy-text">
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="w-5 h-5 text-therapy-gold"></i> Ανθοϊάματα Bach</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="w-5 h-5 text-therapy-gold"></i> Ωτοθεραπεία / ωτικό acupressure</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="w-5 h-5 text-therapy-gold"></i> Τεχνικές χαλάρωσης</li>
+                    </ul>
+                </div>
             </div>
 
             <div class="mt-10 service-card bg-white p-10 lg:p-12 rounded-[2rem] border border-therapy-gold/20 shadow-soft reveal">
@@ -375,185 +359,18 @@
         </div>
     </div>
 
-    <section class="py-24 bg-therapy-lightgold/50 overflow-hidden border-t border-white">
-        <div class="max-w-7xl mx-auto px-6 mb-12 text-center reveal">
-            <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime Logo" class="h-8 mx-auto mb-6">
-            <h2 class="text-4xl font-serif text-therapy-dark mb-4">Εμπειρίες Θεραπευόμενων</h2>
-        </div>
-
-        <div class="w-full overflow-hidden relative pb-10">
-            <div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-therapy-lightgold/50 to-transparent z-10 pointer-events-none"></div>
-            <div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-therapy-lightgold/50 to-transparent z-10 pointer-events-none"></div>
-            
-            <div class="marquee-container animate-marquee">
-                <div class="flex space-x-6 px-3">
-                    <div class="w-80 bg-white p-8 rounded-3xl shadow-soft shrink-0 border border-therapy-gold/20">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <div class="flex items-center gap-1 text-yellow-400 mb-1">
-                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                </div>
-                                <span class="font-bold text-therapy-dark">10.0 / 10</span>
-                            </div>
-                            <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" class="h-4 opacity-50" alt="DA">
-                        </div>
-                        <p class="text-therapy-text text-sm mb-6 italic">"Είναι πολύ ευγενική και σε κάνει να νιώθεις αμέσως την άνεση που ψάχνεις για να ανοιχτεις και να μιλήσεις... Πραγματικά μπράβο!"</p>
-                        <div class="border-t border-gray-100 pt-4">
-                            <p class="text-xs font-bold text-therapy-dark no-accents">ΙΩΑΝΝΑ</p>
-                            <p class="text-xs text-gray-400">08 Φεβρουαρίου 2025</p>
-                        </div>
-                    </div>
-
-                    <div class="w-80 bg-white p-8 rounded-3xl shadow-soft shrink-0 border border-therapy-gold/20">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <div class="flex items-center gap-1 text-yellow-400 mb-1">
-                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                </div>
-                                <span class="font-bold text-therapy-dark">10.0 / 10</span>
-                            </div>
-                            <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" class="h-4 opacity-50" alt="DA">
-                        </div>
-                        <p class="text-therapy-text text-sm mb-6 italic">"Η κυρία Αλάτση είναι επαγγελματίας... Με έχει βοηθήσει πάρα πολύ... Σίγουρα θα συνεχίσω, μου αποπνέει ασφάλεια!"</p>
-                        <div class="border-t border-gray-100 pt-4">
-                            <p class="text-xs font-bold text-therapy-dark no-accents">ΕΛΕΝΗ</p>
-                            <p class="text-xs text-gray-400">07 Φεβρουαρίου 2025</p>
-                        </div>
-                    </div>
-
-                    <div class="w-80 bg-white p-8 rounded-3xl shadow-soft shrink-0 border border-therapy-gold/20">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <div class="flex items-center gap-1 text-yellow-400 mb-1">
-                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                </div>
-                                <span class="font-bold text-therapy-dark">10.0 / 10</span>
-                            </div>
-                            <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" class="h-4 opacity-50" alt="DA">
-                        </div>
-                        <p class="text-therapy-text text-sm mb-6 italic">"Έμεινα πραγματικά εντυπωσιασμένη! Η τεχνική της εξαιρετική, ένιωσα μεγάλη ανακούφιση. Ευχαριστώ πολύ!"</p>
-                        <div class="border-t border-gray-100 pt-4">
-                            <p class="text-xs font-bold text-therapy-dark no-accents">ΝΑΤΑΛΙΑ</p>
-                            <p class="text-xs text-gray-400">07 Φεβρουαρίου 2025</p>
-                        </div>
-                    </div>
-
-                    <div class="w-80 bg-white p-8 rounded-3xl shadow-soft shrink-0 border border-therapy-gold/20">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <div class="flex items-center gap-1 text-yellow-400 mb-1">
-                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                </div>
-                                <span class="font-bold text-therapy-dark">10.0 / 10</span>
-                            </div>
-                            <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" class="h-4 opacity-50" alt="DA">
-                        </div>
-                        <p class="text-therapy-text text-sm mb-6 italic">"Εξαιρετική επιστήμονας. Στάθηκε με επαγγελματισμό και ενσυναίσθηση στο πρόβλημα μου."</p>
-                        <div class="border-t border-gray-100 pt-4">
-                            <p class="text-xs font-bold text-therapy-dark no-accents">ΠΑΝΑΓΙΩΤΗΣ</p>
-                            <p class="text-xs text-gray-400">06 Φεβρουαρίου 2025</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex space-x-6 px-3" aria-hidden="true">
-                    <div class="w-80 bg-white p-8 rounded-3xl shadow-soft shrink-0 border border-therapy-gold/20">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <div class="flex items-center gap-1 text-yellow-400 mb-1">
-                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                </div>
-                                <span class="font-bold text-therapy-dark">10.0 / 10</span>
-                            </div>
-                            <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" class="h-4 opacity-50" alt="DA">
-                        </div>
-                        <p class="text-therapy-text text-sm mb-6 italic">"Είναι πολύ ευγενική και σε κάνει να νιώθεις αμέσως την άνεση που ψάχνεις για να ανοιχτεις και να μιλήσεις... Πραγματικά μπράβο!"</p>
-                        <div class="border-t border-gray-100 pt-4">
-                            <p class="text-xs font-bold text-therapy-dark no-accents">ΙΩΑΝΝΑ</p>
-                            <p class="text-xs text-gray-400">08 Φεβρουαρίου 2025</p>
-                        </div>
-                    </div>
-
-                    <div class="w-80 bg-white p-8 rounded-3xl shadow-soft shrink-0 border border-therapy-gold/20">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <div class="flex items-center gap-1 text-yellow-400 mb-1">
-                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                </div>
-                                <span class="font-bold text-therapy-dark">10.0 / 10</span>
-                            </div>
-                            <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" class="h-4 opacity-50" alt="DA">
-                        </div>
-                        <p class="text-therapy-text text-sm mb-6 italic">"Η κυρία Αλάτση είναι επαγγελματίας... Με έχει βοηθήσει πάρα πολύ... Σίγουρα θα συνεχίσω, μου αποπνέει ασφάλεια!"</p>
-                        <div class="border-t border-gray-100 pt-4">
-                            <p class="text-xs font-bold text-therapy-dark no-accents">ΕΛΕΝΗ</p>
-                            <p class="text-xs text-gray-400">07 Φεβρουαρίου 2025</p>
-                        </div>
-                    </div>
-
-                    <div class="w-80 bg-white p-8 rounded-3xl shadow-soft shrink-0 border border-therapy-gold/20">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <div class="flex items-center gap-1 text-yellow-400 mb-1">
-                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                </div>
-                                <span class="font-bold text-therapy-dark">10.0 / 10</span>
-                            </div>
-                            <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" class="h-4 opacity-50" alt="DA">
-                        </div>
-                        <p class="text-therapy-text text-sm mb-6 italic">"Έμεινα πραγματικά εντυπωσιασμένη! Η τεχνική της εξαιρετική, ένιωσα μεγάλη ανακούφιση. Ευχαριστώ πολύ!"</p>
-                        <div class="border-t border-gray-100 pt-4">
-                            <p class="text-xs font-bold text-therapy-dark no-accents">ΝΑΤΑΛΙΑ</p>
-                            <p class="text-xs text-gray-400">07 Φεβρουαρίου 2025</p>
-                        </div>
-                    </div>
-
-                    <div class="w-80 bg-white p-8 rounded-3xl shadow-soft shrink-0 border border-therapy-gold/20">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <div class="flex items-center gap-1 text-yellow-400 mb-1">
-                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                </div>
-                                <span class="font-bold text-therapy-dark">10.0 / 10</span>
-                            </div>
-                            <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" class="h-4 opacity-50" alt="DA">
-                        </div>
-                        <p class="text-therapy-text text-sm mb-6 italic">"Εξαιρετική επιστήμονας. Στάθηκε με επαγγελματισμό και ενσυναίσθηση στο πρόβλημα μου."</p>
-                        <div class="border-t border-gray-100 pt-4">
-                            <p class="text-xs font-bold text-therapy-dark no-accents">ΠΑΝΑΓΙΩΤΗΣ</p>
-                            <p class="text-xs text-gray-400">06 Φεβρουαρίου 2025</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-12 flex flex-wrap justify-center gap-4">
-                <a href="https://www.doctoranytime.gr/d/Symvoulos-psychikis-ygeias/alatsi-xristina" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-white border border-therapy-gold/30 rounded-full text-sm font-bold text-therapy-dark hover:shadow-md hover:border-therapy-gold transition-all">
-                    Περισσότερα (Ψυχοθεραπεία) <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" class="h-4 ml-1" alt="DA">
-                </a>
-                <a href="https://www.doctoranytime.gr/d/kentro-enallaktikon-therapeion/alatsi-xristina-2" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-white border border-therapy-gold/30 rounded-full text-sm font-bold text-therapy-dark hover:shadow-md hover:border-therapy-gold transition-all">
-                    Περισσότερα (Εναλλακτικές) <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" class="h-4 ml-1" alt="DA">
-                </a>
-            </div>
-        </div>
-    </section>
-
     <footer id="contact" class="bg-therapy-dark text-white pt-24 pb-10 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
                 
                 <div class="lg:col-span-2 reveal">
                     <p class="text-therapy-lightgold max-w-sm mb-8 text-lg leading-relaxed">
-                        Αν αισθάνεστε ότι αυτή είναι η κατάλληλη στιγμή για να ξεκινήσετε μια θεραπευτική διαδικασία ή θέλετε περισσότερες πληροφορίες, επικοινωνήστε μαζί μου.
+                        Αν αισθάνεστε ότι αυτή είναι η κατάλληλη στιγμή για να ξεκινήσετε μια θεραπευτική διαδικασία ή θέλετε περισσότερες πληροφορίες, μπορείτε να επικοινωνήσετε για να προγραμματίσουμε μια πρώτη συνεδρία γνωριμίας.
                     </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="https://www.doctoranytime.gr/d/Symvoulos-psychikis-ygeias/alatsi-xristina" target="_blank" class="inline-flex items-center justify-center bg-therapy-gold text-white px-6 py-3 rounded-full font-bold hover:bg-white hover:text-therapy-dark transition-colors duration-300 shadow-gold text-sm">
-                            Ραντεβού (Ψυχοθεραπεία)
-                        </a>
-                        <a href="https://www.doctoranytime.gr/d/kentro-enallaktikon-therapeion/alatsi-xristina-2" target="_blank" class="inline-flex items-center justify-center bg-transparent border border-therapy-gold text-therapy-gold px-6 py-3 rounded-full font-bold hover:bg-therapy-gold hover:text-white transition-colors duration-300 text-sm">
-                            Ραντεβού (Εναλλακτικές)
-                        </a>
-                    </div>
+                    <a href="https://www.doctoranytime.gr/d/kentro-enallaktikon-therapeion/alatsi-xristina-2" target="_blank" class="inline-flex items-center justify-center bg-therapy-gold text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-therapy-dark transition-colors duration-300 shadow-gold">
+                        <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" class="h-4 mr-3 filter brightness-0 invert group-hover:filter-none">
+                        Κλείστε Ραντεβού
+                    </a>
                 </div>
 
                 <div class="reveal reveal-delay-1">
@@ -577,7 +394,7 @@
                             <i data-lucide="linkedin" class="w-5 h-5"></i>
                         </a>
                         <a href="https://tiktok.com/@en.exelixi" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-therapy-gold/30 flex items-center justify-center hover:bg-therapy-gold hover:text-white transition-colors">
-                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                            <svg viewBox="0 0 448 512" class="w-4 h-4 fill-current"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25v178.72A162.55 162.55 0 1 1 185 188.31v89.89a74.62 74.62 0 1 0 52.23 71.18V0h88a121.18 121.18 0 0 0 1.86 22.17 122.18 122.18 0 0 0 53.93 80.22 121.43 121.43 0 0 0 67 20.14z"/></svg>
                         </a>
                     </div>
                 </div>
@@ -669,6 +486,7 @@
             modalBody.innerHTML = article.fullBody;
             
             articleModal.classList.remove('hidden');
+            // Timeout to allow display:flex to apply before animating opacity
             setTimeout(() => {
                 articleModal.classList.add('show');
                 articleModal.classList.remove('opacity-0');
@@ -706,19 +524,7 @@
             return new Date(dateString).toLocaleDateString('el-GR', options);
         }
 
-        // Exact preview text based on user request logic
-        function getPreviewText(plainText) {
-            const targetStr = "Στρες και Άγχος: ποια είναι η διαφορά και πώς επηρεάζουν τη ζωή μας. Στην καθημερινότητα οι λέξεις «στρες» και «άγχος» χρησιμοποιούνται συχνά σαν να σημαίνουν το ίδιο πράγμα. Στην πραγματικότητα όμως πρόκειται για δύο διαφορετικές καταστάσεις που συνδέονται μεταξύ τους αλλά έχουν διαφορετική λειτουργία και επίδραση στον οργανισμό.";
-            
-            // If the article matches the specific text, display it up to that point
-            if(plainText.includes("Στην καθημερινότητα οι λέξεις")) {
-                return targetStr + "...";
-            }
-            
-            // Fallback for other articles
-            return plainText.length > 290 ? plainText.substring(0, 290).trim() + '...' : plainText;
-        }
-
+        // Extracts plain text for the preview snippet
         function getPlainText(field) {
             if (!field) return '';
             if (field.nodeType === 'document') {
@@ -732,6 +538,7 @@
             return field.toString();
         }
 
+        // Renders full HTML for the popup
         function renderBody(field) {
             if (!field) return ''; 
             if (field.nodeType === 'document') { 
@@ -758,7 +565,8 @@
 
                 fetchedArticles = response.items.map(entry => {
                     const plainText = getPlainText(entry.fields.body);
-                    const previewText = getPreviewText(plainText);
+                    // Preview cuts off exactly around the requested mark or dynamically handles generic articles
+                    const previewText = plainText.length > 320 ? plainText.substring(0, 320).trim() + '...' : plainText;
 
                     return {
                         title: entry.fields.title || "Χωρίς Τίτλο",
